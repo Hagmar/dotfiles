@@ -3,6 +3,7 @@ execute pathogen#infect()
 " UI
 set number                  " Line numbers
 set ruler                   " Always display infobar at bottom
+set laststatus=2            " Always display statusbar
 set wildmenu                " Visual autocomplete for command window
 
 " Movement
@@ -12,10 +13,13 @@ nnoremap k gk
                             " Move to beginning/end of line
 nnoremap B ^
 nnoremap E $
+set scrolloff=1             " Always show lines above/below cursor
                             " Highlight last inserted text
 nnoremap gV `[v`]
 
 " Editing
+set history=500             " Remember commands
+set autoread                " Detect updates from outside vim and reload file
 set nrformats-=octal        " Don't recognize octal numbers
 
 " Leader shortcuts
@@ -24,6 +28,8 @@ let mapleader=","           " Set leader to comma
 inoremap jk <esc>
                             " Toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
+                            " Open CtrlP
+nnoremap <leader>o :CtrlP<CR>
 
 " Indentation
 set autoindent              " Autoindent
