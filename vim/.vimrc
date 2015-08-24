@@ -1,5 +1,8 @@
+execute pathogen#infect()
+
 " UI
 set number                  " Line numbers
+set ruler                   " Always display infobar at bottom
 set wildmenu                " Visual autocomplete for command window
 
 " Movement
@@ -12,10 +15,15 @@ nnoremap E $
                             " Highlight last inserted text
 nnoremap gV `[v`]
 
+" Editing
+set nrformats-=octal        " Don't recognize octal numbers
+
 " Leader shortcuts
 let mapleader=","           " Set leader to comma
                             " jk is escape
 inoremap jk <esc>
+                            " Toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
 
 " Indentation
 set autoindent              " Autoindent
