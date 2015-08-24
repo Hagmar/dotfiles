@@ -5,6 +5,8 @@ set number                  " Line numbers
 set ruler                   " Always display infobar at bottom
 set laststatus=2            " Always display statusbar
 set wildmenu                " Visual autocomplete for command window
+set splitbelow              " Horizontal splits place new pane below current
+set splitright              " Vertical splits place new pane right of current
 
 " Movement
                             " Move vertically by visual line
@@ -21,6 +23,7 @@ nnoremap gV `[v`]
 set history=500             " Remember commands
 set autoread                " Detect updates from outside vim and reload file
 set nrformats-=octal        " Don't recognize octal numbers
+set pastetoggle=<F2>        " Toggle paste mode with F2
 
 " Leader shortcuts
 let mapleader=","           " Set leader to comma
@@ -62,5 +65,5 @@ let g:ctrlp_user_command='ag %s -l --nocolor -g ""'     " Search using Ag
 set showmatch               " Show matching brackets
 set lazyredraw              " Only redraw when necessary
 
-                            " Show time when pressing F2
-noremap <F2> :echo strftime('%c')<CR>
+                            " Show time when pressing F3
+noremap <F3> :echo strftime('%c')<CR>
