@@ -60,7 +60,9 @@ nnoremap <space> za
 let g:ctrlp_match_window='bottom,order:ttb'     " Order matches from top to bottom
 let g:ctrlp_switch_buffer=0                     " Open selected files in a new buffer
 let g:ctrlp_working_path_mode=0                 " Accept working directory changes
-let g:ctrlp_user_command='ag %s -l --nocolor -g ""'     " Search using Ag
+if executable("ag")
+    let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'     " Search using Ag
+endif
 
 set showmatch               " Show matching brackets
 set lazyredraw              " Only redraw when necessary
