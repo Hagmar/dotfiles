@@ -53,7 +53,14 @@ set foldmethod=syntax       " Fold based on syntax
                             " Space opens/closes folds
 nnoremap <space> za
 
+" CtrlP settings
+let g:ctrlp_match_window='bottom,order:ttb'     " Order matches from top to bottom
+let g:ctrlp_switch_buffer=0                     " Open selected files in a new buffer
+let g:ctrlp_working_path_mode=0                 " Accept working directory changes
+let g:ctrlp_user_command='ag %s -l --nocolor -g ""'     " Search using Ag
+
 set showmatch               " Show matching brackets
 set lazyredraw              " Only redraw when necessary
+
                             " Show time when pressing F2
 noremap <F2> :echo strftime('%c')<CR>
