@@ -14,14 +14,19 @@ if [ ! -f ~/.vim/autoload/pathogen.vim ]; then
 fi
 
 # Gundo
-git clone https://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo
 if [ ! -d ~/.vim/bundle/gundo ];then
-    echo "Error - could not install gundo" >&2
-    exit 1
+    git clone https://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo
+    if [ ! -d ~/.vim/bundle/gundo ];then
+        echo "Error - could not install gundo" >&2
+        exit 1
+    fi
+fi
 
 # CtrlP
-git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 if [ ! -d ~/.vim/bundle/ctrlp.vim ];then
-    echo "Error - could not install CtrlP" >&2
-    exit 1
+    git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+    if [ ! -d ~/.vim/bundle/ctrlp.vim ];then
+        echo "Error - could not install CtrlP" >&2
+        exit 1
+    fi
 fi
