@@ -24,3 +24,4 @@ git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 if [ ! -d ~/.vim/bundle/ctrlp.vim ];then
     echo "Error - could not install CtrlP" >&2
     exit 1
+fi
