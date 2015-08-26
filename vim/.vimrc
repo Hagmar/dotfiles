@@ -57,6 +57,10 @@ set foldmethod=syntax       " Fold based on syntax
                             " Space opens/closes folds
 nnoremap <space> za
 
+" Gundo settings
+let g:gundo_preview_bottom=1                    " Force preview window below current windows
+let g:gundo_close_on_revert=1                   " Automatically close on revert
+
 " CtrlP settings
 let g:ctrlp_match_window='bottom,order:ttb'     " Order matches from top to bottom
 let g:ctrlp_switch_buffer=0                     " Open selected files in a new buffer
