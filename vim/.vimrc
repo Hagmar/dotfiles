@@ -41,7 +41,7 @@ set autoindent              " Autoindent
 set smartindent
 set tabstop=4               " Number of visual spaces per tab
 set softtabstop=4           " Number of spaces in tab when editing
-set expandtab               " Turn tabs into spaces
+set noexpandtab             " Don't turn tabs into spaces
 set shiftwidth=4            " Number of spaces to use for autoindent
 filetype indent on          " Load filetyp-specific indent files
 
@@ -65,7 +65,7 @@ let g:gundo_close_on_revert=1                   " Automatically close on revert
 
 " CtrlP settings
 let g:ctrlp_match_window='bottom,order:ttb'     " Order matches from top to bottom
-let g:ctrlp_switch_buffer=0                     " Open selected files in a new buffer
+let g:ctrlp_switch_buffer='Et'                  " Open selected files in a new buffer
 let g:ctrlp_working_path_mode=0                 " Accept working directory changes
 if executable("ag")
     let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'     " Search using Ag
