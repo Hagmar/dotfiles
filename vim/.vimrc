@@ -33,6 +33,8 @@ inoremap jk <esc>
 nnoremap <leader>u :GundoToggle<CR>
                             " Open CtrlP
 nnoremap <leader>o :CtrlP<CR>
+                            " Open CtrlP in buffer mode
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " Indentation
 set autoindent              " Autoindent
