@@ -2,9 +2,9 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-ln -sfv "$DIR/vim/.vimrc" ~
-
 ###  Vim ###
+
+ln -sfv "$DIR/vim/.vimrc" ~
 
 # Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
