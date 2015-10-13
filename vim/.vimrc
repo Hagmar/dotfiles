@@ -36,6 +36,8 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
                             " Open CtrlP in buffer mode
 nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>sp :set syntax=python<CR>
+nnoremap <leader>sh :set syntax=html<CR>
 
 " Indentation
 set autoindent              " Autoindent
