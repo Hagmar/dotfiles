@@ -2,6 +2,7 @@ execute pathogen#infect()
 
 " UI
 set number                  " Line numbers
+syntax on
 set ruler                   " Always display infobar at bottom
 set laststatus=2            " Always display statusbar
 set wildmenu                " Visual autocomplete for command window
