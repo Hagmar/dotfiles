@@ -44,7 +44,7 @@ set autoindent              " Autoindent
 set smartindent
 set tabstop=4               " Number of visual spaces per tab
 set softtabstop=4           " Number of spaces in tab when editing
-set noexpandtab             " Don't turn tabs into spaces
+set expandtab               " Don't turn tabs into spaces
 set shiftwidth=4            " Number of spaces to use for autoindent
 filetype indent on          " Load filetyp-specific indent files
 
