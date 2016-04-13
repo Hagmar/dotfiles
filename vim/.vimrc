@@ -71,7 +71,8 @@ let g:ctrlp_match_window='bottom,order:ttb'     " Order matches from top to bott
 let g:ctrlp_switch_buffer='Et'                  " Open selected files in a new buffer
 let g:ctrlp_working_path_mode=0                 " Accept working directory changes
 if executable("ag")
-    let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'     " Search using Ag
+                                                " Search using Ag
+    let g:ctrlp_user_command='ag %s --files-with-matches --nocolor --hidden -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
 endif
 
 set showmatch               " Show matching brackets
