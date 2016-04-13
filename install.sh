@@ -37,3 +37,15 @@ else
     echo "Updating CtrlP"
     ( cd ~/.vim/bundle/ctrlp.vim && git pull )
 fi
+
+# NERD Commenter
+if [ ! -d ~/.vim/bundle/nerdcommenter ];then
+    git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
+    if [ ! -d ~/.vim/bundle/nerdcommenter ];then
+        echo "Error - could not install CtrlP" >&2
+        exit 1
+    fi
+else
+    echo "Updating NERD Commenter"
+    ( cd ~/.vim/bundle/nerdcommenter && git pull )
+fi
