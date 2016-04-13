@@ -42,7 +42,7 @@ fi
 if [ ! -d ~/.vim/bundle/nerdcommenter ];then
     git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
     if [ ! -d ~/.vim/bundle/nerdcommenter ];then
-        echo "Error - could not install CtrlP" >&2
+        echo "Error - could not install NERD Commenter" >&2
         exit 1
     fi
 else
