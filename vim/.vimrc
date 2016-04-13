@@ -21,6 +21,7 @@ set scrolloff=1             " Always show lines above/below cursor
 nnoremap gV `[v`]
 
 " Editing
+set backspace=2             " Delete all characters with backspace
 set history=500             " Remember commands
 set autoread                " Detect updates from outside vim and reload file
 set nrformats-=octal        " Don't recognize octal numbers
@@ -52,7 +53,7 @@ filetype indent on          " Load filetyp-specific indent files
 set incsearch               " Search while typing
 set hlsearch                " Highlight all search matches
                             " Clear search highlights
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <silent> <leader><space> :nohlsearch<CR>
 
 " Folding
 set foldenable              " Enable folding
