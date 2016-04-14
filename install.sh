@@ -49,3 +49,15 @@ else
     echo "Updating NERD Commenter"
     ( cd ~/.vim/bundle/nerdcommenter && git pull )
 fi
+
+# Surround.vim
+if [ ! -d ~/.vim/bundle/surround.vim ];then
+    git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/surround.vim
+    if [ ! -d ~/.vim/bundle/surround.vim ];then
+        echo "Error - could not install Surround.vim" >&2
+        exit 1
+    fi
+else
+    echo "Updating NERD Commenter"
+    ( cd ~/.vim/bundle/surround.vim && git pull )
+fi
