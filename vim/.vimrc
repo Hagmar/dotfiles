@@ -37,7 +37,9 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
                             " Open CtrlP in buffer mode
 nnoremap <leader>b :CtrlPBuffer<CR>
+                            " Set syntax to python
 nnoremap <leader>sp :set syntax=python<CR>
+                            " Set syntax to html
 nnoremap <leader>sh :set syntax=html<CR>
 
 " Indentation
@@ -75,6 +77,18 @@ if executable("ag")
                                                 " Search using Ag
     let g:ctrlp_user_command='ag %s --files-with-matches --nocolor --hidden -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
 endif
+
+" Syntastic settings
+" Recommended settings for now
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 
 set showmatch               " Show matching brackets
 set lazyredraw              " Only redraw when necessary

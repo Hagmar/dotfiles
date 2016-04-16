@@ -61,3 +61,15 @@ else
     echo "Updating NERD Commenter"
     ( cd ~/.vim/bundle/surround.vim && git pull )
 fi
+
+# Syntastic
+if [ ! -d ~/.vim/bundle/syntastic ];then
+    git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
+    if [ ! -d ~/.vim/bundle/syntastic ];then
+        echo "Error - could not install Syntastic" >&2
+        exit 1
+    fi
+else
+    echo "Updating Syntastic"
+    ( cd ~/.vim/bundle/syntastic && git pull )
+fi
