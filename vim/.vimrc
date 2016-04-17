@@ -79,6 +79,15 @@ if executable("ag")
 endif
 
 " Syntastic settings
+                            " Hide Syntastic output
+nnoremap <silent> <leader>h :SyntasticReset<CR>
+                            " Jump to next error
+nnoremap <silent> <leader>n :lnext<CR>
+                            " Jump to previous error
+nnoremap <silent> <leader>p :lprev<CR>
+                            " Jump to first error
+nnoremap <silent> <leader>f :lfirst<CR>
+
 " Recommended settings for now
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
