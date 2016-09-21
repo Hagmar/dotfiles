@@ -16,6 +16,9 @@ nnoremap k gk
                             " Move to beginning/end of line
 nnoremap B ^
 nnoremap E $
+                            " Move up/down one buffer
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
 set scrolloff=1             " Always show lines above/below cursor
                             " Highlight last inserted text
 nnoremap gV `[v`]
@@ -57,14 +60,6 @@ set hlsearch                " Highlight all search matches
                             " Clear search highlights
 nnoremap <silent> <leader><space> :nohlsearch<CR>
 
-" Folding
-set foldenable              " Enable folding
-set foldlevelstart=15       " Open most folds by default
-set foldnestmax=10          " Max 10 nested folds
-set foldmethod=syntax       " Fold based on syntax
-                            " Space opens/closes folds
-nnoremap <space> za
-
 " Gundo settings
 let g:gundo_preview_bottom=1                    " Force preview window below current windows
 let g:gundo_close_on_revert=1                   " Automatically close on revert
@@ -97,6 +92,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 
 set showmatch               " Show matching brackets
