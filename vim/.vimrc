@@ -29,6 +29,7 @@ set history=500             " Remember commands
 set autoread                " Detect updates from outside vim and reload file
 set nrformats-=octal        " Don't recognize octal numbers
 set pastetoggle=<F2>        " Toggle paste mode with F2
+vnoremap s :sort<CR>
 
 " Leader shortcuts
 let mapleader=","           " Set leader to comma
